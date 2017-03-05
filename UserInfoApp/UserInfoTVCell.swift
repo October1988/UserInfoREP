@@ -10,6 +10,14 @@ import UIKit
 
 class UserInfoTVCell: UITableViewCell {
 
+    @IBOutlet weak var photoView: UIImageView!
+    
+    @IBOutlet weak var firstNameLbl: UILabel!
+    
+    @IBOutlet weak var lastNameLbl: UILabel!
+    
+    @IBOutlet weak var emailLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

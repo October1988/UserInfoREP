@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		843D117F1E6C3331007009B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D117E1E6C3331007009B3 /* AppDelegate.swift */; };
-		843D11811E6C3331007009B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D11801E6C3331007009B3 /* ViewController.swift */; };
 		843D11841E6C3331007009B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843D11821E6C3331007009B3 /* Main.storyboard */; };
 		843D11871E6C3331007009B3 /* UserInfoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 843D11851E6C3331007009B3 /* UserInfoApp.xcdatamodeld */; };
 		843D11891E6C3331007009B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843D11881E6C3331007009B3 /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		843D117B1E6C3331007009B3 /* UserInfoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserInfoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		843D117E1E6C3331007009B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		843D11801E6C3331007009B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		843D11831E6C3331007009B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		843D11861E6C3331007009B3 /* UserInfoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserInfoApp.xcdatamodel; sourceTree = "<group>"; };
 		843D11881E6C3331007009B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 			children = (
 				84E28F4E1E6C686600EF3637 /* UserInfoTableVC.swift */,
 				843D117E1E6C3331007009B3 /* AppDelegate.swift */,
-				843D11801E6C3331007009B3 /* ViewController.swift */,
 				843D11821E6C3331007009B3 /* Main.storyboard */,
 				84E28F501E6C68C400EF3637 /* UserInfoTVCell.swift */,
 				843D11881E6C3331007009B3 /* Assets.xcassets */,
@@ -149,7 +146,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E28F4F1E6C686600EF3637 /* UserInfoTableVC.swift in Sources */,
-				843D11811E6C3331007009B3 /* ViewController.swift in Sources */,
 				843D11871E6C3331007009B3 /* UserInfoApp.xcdatamodeld in Sources */,
 				843D117F1E6C3331007009B3 /* AppDelegate.swift in Sources */,
 				84E28F511E6C68C400EF3637 /* UserInfoTVCell.swift in Sources */,
