@@ -13,6 +13,8 @@
 		843D11871E6C3331007009B3 /* UserInfoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 843D11851E6C3331007009B3 /* UserInfoApp.xcdatamodeld */; };
 		843D11891E6C3331007009B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 843D11881E6C3331007009B3 /* Assets.xcassets */; };
 		843D118C1E6C3331007009B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843D118A1E6C3331007009B3 /* LaunchScreen.storyboard */; };
+		84E28F4F1E6C686600EF3637 /* UserInfoTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E28F4E1E6C686600EF3637 /* UserInfoTableVC.swift */; };
+		84E28F511E6C68C400EF3637 /* UserInfoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E28F501E6C68C400EF3637 /* UserInfoTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		843D11881E6C3331007009B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		843D118B1E6C3331007009B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		843D118D1E6C3331007009B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E28F491E6C66D200EF3637 /* UserInfoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserInfoApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		84E28F4E1E6C686600EF3637 /* UserInfoTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfoTableVC.swift; path = ../UserInfoTableVC.swift; sourceTree = "<group>"; };
+		84E28F501E6C68C400EF3637 /* UserInfoTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +47,7 @@
 			children = (
 				843D117D1E6C3331007009B3 /* UserInfoApp */,
 				843D117C1E6C3331007009B3 /* Products */,
+				84E28F491E6C66D200EF3637 /* UserInfoApp-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,9 +62,11 @@
 		843D117D1E6C3331007009B3 /* UserInfoApp */ = {
 			isa = PBXGroup;
 			children = (
+				84E28F4E1E6C686600EF3637 /* UserInfoTableVC.swift */,
 				843D117E1E6C3331007009B3 /* AppDelegate.swift */,
 				843D11801E6C3331007009B3 /* ViewController.swift */,
 				843D11821E6C3331007009B3 /* Main.storyboard */,
+				84E28F501E6C68C400EF3637 /* UserInfoTVCell.swift */,
 				843D11881E6C3331007009B3 /* Assets.xcassets */,
 				843D118A1E6C3331007009B3 /* LaunchScreen.storyboard */,
 				843D118D1E6C3331007009B3 /* Info.plist */,
@@ -99,6 +107,7 @@
 				TargetAttributes = {
 					843D117A1E6C3330007009B3 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,9 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E28F4F1E6C686600EF3637 /* UserInfoTableVC.swift in Sources */,
 				843D11811E6C3331007009B3 /* ViewController.swift in Sources */,
 				843D11871E6C3331007009B3 /* UserInfoApp.xcdatamodeld in Sources */,
 				843D117F1E6C3331007009B3 /* AppDelegate.swift in Sources */,
+				84E28F511E6C68C400EF3637 /* UserInfoTVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,10 +273,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = UserInfoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Home.UserInfoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UserInfoApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,10 +289,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = UserInfoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Home.UserInfoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UserInfoApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -301,6 +319,7 @@
 				843D11921E6C3331007009B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
