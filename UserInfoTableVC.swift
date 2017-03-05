@@ -9,9 +9,32 @@
 import UIKit
 
 class UserInfoTableVC: UITableViewController {
-
+    
+    
+    var jsonUsers = [User]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let fileUrl =  Bundle.main.url(forResource: "users", withExtension: "json")  {
+            do{
+                let data = try Data(contentsOf: fileUrl, options: Data.ReadingOptions.mappedIfSafe)
+                guard let json = try? JSONSerialization.jsonObject(with: data) as? [[String:Any]]
+                else{
+                    return
+                }
+                for item in json!{
+                    if let curent = User(json: item){
+                        jsonUsers.append(curent)
+                    }
+                    
+                }
+                
+            }catch let error{
+                print(error.localizedDescription)
+            }
+            
+        }
+        
 
         // Uncomment the following line to preserve selection between presentations
 //         self.clearsSelectionOnViewWillAppear = false
@@ -30,13 +53,17 @@ class UserInfoTableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return jsonUsers.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserInfoCell", for: indexPath)
-
+        if let curentCell = cell as? UserInfoTVCell{
+            curentCell.firstNameLbl.text = jsonUsers[indexPath.row].firstName
+            curentCell.lastNameLbl.text = jsonUsers[indexPath.row].lastName
+            curentCell.emailLbl.text = jsonUsers[indexPath.row].email
+        }
         // Configure the cell...
 
         return cell
