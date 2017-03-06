@@ -63,9 +63,17 @@ class UserInfoTableVC: UITableViewController {
             curentCell.firstNameLbl.text = jsonUsers[indexPath.row].firstName
             curentCell.lastNameLbl.text = jsonUsers[indexPath.row].lastName
             curentCell.emailLbl.text = jsonUsers[indexPath.row].email
-        }
+        
         // Configure the cell...
-
+        
+        if let hashString = jsonUsers[indexPath.row].email.md5(){
+           let imageUrlString = "https://www.gravatar.com/avatar/" + hashString
+            let imageUrl = URL(string: imageUrlString)
+            curentCell.photoView.downloadAsync(from: imageUrl!, defaultNamedImage: "NoPhoto")
+        }else{
+            curentCell.photoView.image = UIImage(named: "NoPhoto")
+        }
+        }
         return cell
     }
     
